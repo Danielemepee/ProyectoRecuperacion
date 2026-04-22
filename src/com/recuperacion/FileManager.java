@@ -31,3 +31,4 @@ public class FileManager {
 		return extension;
 	}
 }
+//Fin de la clase FileManager
