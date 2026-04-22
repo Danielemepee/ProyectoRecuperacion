@@ -10,10 +10,10 @@ public class FileManager {
         File archivo = new File(ruta);
         if (archivo.exists()) {
             System.out.println("Archivo encontrado: " + archivo.getName());
-            long tamano = archivo.length();
-            System.out.println("Tamaño: " + tamano + " bytes");
+            long tamanoArchivoBytes = archivo.length();
+            System.out.println("Tamaño: " + tamanoArchivoBytes + " bytes");
             
-            if (tamano > TAMANO_MAX_BYTES) {
+            if (tamanoArchivoBytes > TAMANO_MAX_BYTES) {
                 System.out.println("Archivo grande, comprimiendo...");
             }
             
