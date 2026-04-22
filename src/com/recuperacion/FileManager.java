@@ -17,12 +17,17 @@ public class FileManager {
                 System.out.println("Archivo grande, comprimiendo...");
             }
             
-            String extension = "";
-            int posicionPunto = ruta.lastIndexOf('.');
-            if (posicionPunto > 0) {
-                extension = ruta.substring(posicionPunto + 1);
-            }
+            String extension = obtenerExtension(ruta);
             System.out.println("Extensión: " + extension);
         }
     }
+
+	private String obtenerExtension(String ruta) {
+		String extension = "";
+		int posicionPunto = ruta.lastIndexOf('.');
+		if (posicionPunto > 0) {
+		    extension = ruta.substring(posicionPunto + 1);
+		}
+		return extension;
+	}
 }
